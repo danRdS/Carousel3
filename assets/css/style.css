@@ -3,11 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e7e7e7;
 }
 
 body {
     background-color: #1f1f1f;
-    color: #e7e7e7;
     padding: .5rem;
 }
 
@@ -17,7 +17,7 @@ body {
     place-items: center;
 }
 
-h2 { color: #ffd700; }
+h2 i { color: #ffd700; }
 
 h2::before, h2::after {
     content: '';
@@ -98,7 +98,6 @@ progress::-moz-progress-bar {
     top: .8rem;
     right: 1rem;
     z-index: 1;
-    color: #e7e7e7;
     letter-spacing: 1px;
     text-shadow: 0 0 1px rgb(0, 0, 0);
 }
@@ -112,7 +111,6 @@ button {
     padding: .1rem .3rem;
     font-size: 1.2rem;
     background-color: transparent;
-    color: #e7e7e7;
     cursor: pointer;
 }
 
@@ -135,7 +133,6 @@ section .area-inputs {
     display: flex;
     align-items: center;
     gap: 1.2rem;
-    background: transparent;
 }
 
 .area-inputs input {
@@ -158,12 +155,13 @@ section .area-inputs {
 }
 
 .paragrafo-animado {
-    width: 220px;
+    width: 250px;
     height: 40px;
     display: flex;
     align-items: center;
     gap: .2rem;
     margin: auto;
+    white-space: nowrap;
 }
 
 #texto {
@@ -179,8 +177,10 @@ section .area-inputs {
 }
 
 #texto.aumentar-texto {
-    background: linear-gradient(to right bottom, #ff00ff, #ff1493);
+    background-image: linear-gradient(to right bottom, #ff00ff, #ff1493);
     background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     font-size: 1.5rem;
     transform: translate(.1rem, -.1rem);
@@ -193,8 +193,8 @@ section .area-inputs {
     animation-delay: 1s;
 }
 
-@keyframes mostrar {
-    50%, 90% { content: ' ❤️';}
+@keyframes mostrar { 
+    50%, 90% { content: ' ❤️';} 
 }
 
 @keyframes piscar { 50% { border-color: transparent} }
